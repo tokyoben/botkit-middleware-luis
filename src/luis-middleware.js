@@ -74,9 +74,12 @@ function receive(options) {
 }
 
 function hereIntent(tests, message) {
+	console.log(message)
     if (message.topIntent) {
         var intent = message.topIntent.intent.toLowerCase();
+	    console.log(intent)
         for (var i = 0; i < tests.length; i++) {
+		console.log(tests[i])
             if (tests[i].trim().toLowerCase() == intent) {
                 return true;
             }
