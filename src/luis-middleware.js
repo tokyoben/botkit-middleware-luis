@@ -31,6 +31,8 @@ function receive(options) {
                     if (!err) {
 
                         var result = JSON.parse(body);
+			    
+			    console.log(result)
 
 						if (result.topScoringIntent) {
 							// API v2.0
